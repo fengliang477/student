@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div class="index">
+    <!-- 头部 -->
+    <div class="top">
+        <div class="title">
+            学生管理系统
+        </div>
+        <div>
+            fengliang
+        </div>
+
+    </div>
+    <!-- 主要区域 -->
+    <div class="main">
+        <!-- 左侧区域 -->
+        <div class="left">
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="student.html">学生管理</a>
+                </li>
+                <li>
+                    <a href="teacher.html">教师管理</a>
+                </li>
+                <li>
+                    <a href="course.html">课程管理</a>
+                </li>
+                <li>
+                    <a href="sc.html">成绩管理</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div>
+                <h3 class="title55">教师管理</h3>
+                <div class="search">
+                    <input class="input" type="text" placeholder="请输入关键字">
+                    <button onclick="gettUserData()">搜索</button>
+                </div>
+                <div class="add">
+                    <button onclick="window.location.href='teacher-add.html';">添加教师</button>
+                </div>
+                <div class="table">
+                    <table>
+                        <thead>
+                        <th>教师编号</th>
+                        <th>教师姓名</th>
+                        <th>教师性别</th>
+                        <th>教师年龄</th>
+                        <th>教师电话</th>
+                        <th>教师邮箱</th>
+                        <th>操作</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/getuser.js"></script>
+
+</body>
+
+</html>

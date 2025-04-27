@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        // 检查是否是首次访问或通过导航进入
+        document.addEventListener('DOMContentLoaded', function() {
+            const isFromNav = document.referrer.includes('index.html');
+            const hasVisited = localStorage.getItem('hasVisitedIndex');
+
+            if (!hasVisited && !isFromNav) {
+                alert('欢迎首次访问学生管理系统！');
+                localStorage.setItem('hasVisitedIndex', 'true');
+            }
+            document.getElementById('logout').addEventListener('click', function() {
+                localStorage.removeItem('hasVisitedIndex');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="index">
+        <!-- 头部 -->
+        <div class="top">
+            <div class="title">
+                学生管理系统
+            </div>
+            <div>
+                fengliang
+                <a href="../login.html" id="logout">退出</a>
+            </div>
+
+        </div>
+        <!-- 主要区域 -->
+        <div class="main">
+            <!-- 左侧区域 -->
+            <div class="left">
+                <ul>
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="student.html">学生管理</a>
+                    </li>
+                    <li>
+                        <a href="teacher.html">教师管理</a>
+                    </li>
+                    <li>
+                        <a href="course.html">课程管理</a>
+                    </li>
+                    <li>
+                        <a href="sc.html">成绩管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div>
+                    <h3 class="welcome">
+                        欢迎来到学生管理系统
+                    </h3>
+                    <div class="content">
+                        <div class="item">
+                            <h4>
+                                学生总数
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                教师总数
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                        <div class="item">
+                            <h4>
+                                当前课程数量
+                            </h4>
+                            <p>
+                                100
+                            </p>
+                        </div>
+                    </div>
+            </div>
+         </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/add.css">
+</head>
+
+<body>
+    <div class="index">
+        <!-- 头部 -->
+        <div class="top">
+            <div class="title">
+                学生管理系统
+            </div>
+            <div>
+                fengliang
+            </div>
+
+        </div>
+        <!-- 主要区域 -->
+        <div class="main">
+            <!-- 左侧区域 -->
+            <div class="left">
+                <ul>
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="student.html">学生管理</a>
+                    </li>
+                    <li>
+                        <a href="teacher.html">教师管理</a>
+                    </li>
+                    <li>
+                        <a href="course.html">课程管理</a>
+                    </li>
+                    <li>
+                        <a href="sc.html">成绩管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div>
+                    <h3 class="title55">添加学生</h3>
+                    <div class="add">
+                        <button id="back" onclick="window.location.href='student.html';">返回</button>
+                        <button id="submit" onclick="alert('提交成功');window.location.href='student.html';">提交</button>
+                    </div>
+                    <form>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="">学号</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="请输入学号">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">姓名</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" placeholder="请输入姓名">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">性别</label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sex" id="male">男
+                                        <input type="radio" name="sex" id="female">女
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">年龄</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" placeholder="请输入年龄">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phone">电话</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" id="phone" placeholder="请输入电话">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">邮箱</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" id="email" placeholder="请输入邮箱">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+    </div>
+
+</body>
+
+</html>
