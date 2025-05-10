@@ -16,7 +16,7 @@ document.addEventListener('mousemove', (event) => {
         return;
     }
 
-    const radius = Math.max(button.offsetWidth * 0.75, button.offsetHeight * 0.75, 100);
+    const radius = Math.max(button.offsetWidth * 0.9, button.offsetHeight * 0.9, 500);
     const bx = button.offsetLeft + button.offsetWidth / 2;
     const by = button.offsetTop + button.offsetHeight / 2;
 

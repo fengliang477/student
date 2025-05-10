@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 
 public class sca {
-    private int id;
+    private long id;
     private String name;
     private int cid;
     private String cname;

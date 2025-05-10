@@ -22,6 +22,11 @@
                 <version>1.18.26</version> <!-- 替换为下载的Lombok版本 -->
                 <scope>provided</scope>
             </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
+        </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
