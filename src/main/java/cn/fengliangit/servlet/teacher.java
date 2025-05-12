@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import cn.fengliangit.servlet.teacheruser;
@@ -18,15 +19,38 @@ public class teacher extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<teacheruser> users=new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
-            teacheruser user = new teacheruser();
-            user.setId(1000L+i);
-            user.setName("提莫"+i+"号");
-            user.setAge(RandomUtil.randomInt(18,30));
-            user.setSex(RandomUtil.randomString("男女",1));
-            user.setPhone(RandomUtil.randomNumbers(11));
-            user.setEmail(RandomUtil.randomString(10)+"@qq.com");
-            users.add(user);
+
+        String jdbcURL = "jdbc:mysql://localhost:3306/student";
+        String username = "root";
+        String password = "060703";
+        try (Connection connection = DriverManager.getConnection(jdbcURL, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement("SELECT id,name,sex,age,phone,email FROM teacher")) {
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String sex = resultSet.getString("sex");
+                int age = resultSet.getInt("age");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                teacheruser user = new teacheruser();
+                user.setId((long) id);
+                user.setName(name);
+                user.setSex(sex);
+                user.setAge(age);
+                user.setPhone(phone);
+                user.setEmail(email);
+                users.add(user);
+
+
+
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         // 将数据转为json数据
         String jsonData = JSONUtil.toJsonStr(users);

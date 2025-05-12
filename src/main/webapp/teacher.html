@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/getuser.js"></script>
 </head>
 
 <body>
+<script>
+    window.onload = function () {
+        gettUserData()
+    }
+    console.log('输出完成')
+</script>
 <div class="index">
     <!-- 头部 -->
     <div class="top">
@@ -47,7 +54,7 @@
                 <h3 class="title55">教师管理</h3>
                 <div class="search">
                     <input class="input" type="text" placeholder="请输入关键字">
-                    <button onclick="gettUserData()">搜索</button>
+                    <button>搜索</button>
                 </div>
                 <div class="add">
                     <button onclick="window.location.href='teacher-add.html';">添加教师</button>
@@ -75,7 +82,7 @@
     </div>
 
 </div>
-<script src="js/getuser.js"></script>
+
 
 </body>
 
